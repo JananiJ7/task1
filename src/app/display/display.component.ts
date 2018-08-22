@@ -15,9 +15,6 @@ displaymode=false;
   constructor(private detailService:DetailService) { }
 
   ngOnInit() {
-    
-  }
-  fun(){
     this.detailService.myobservable.subscribe( (data:string)=>{
       this.details = data;
       console.log(data);
@@ -27,6 +24,9 @@ this.email = this.details.email
 this.password = this.details.password;
 this.subscription=this.details.subscription;
 this.displaymode=true;
+  }
+  fun(){
+    
   }
   
 }
